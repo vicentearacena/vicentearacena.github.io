@@ -123,7 +123,562 @@
           
 <h1 class="title">2- Mecanizado CNC</h1>
 <div class="content ">
+  <h1 id="mecanizado-cnc">Mecanizado CNC</h1>
+<h2 id="introducción">Introducción</h2>
+<p>Este trabajo trata de cortar piezas en una plancha de 122cm x 122cm x 15 mm para poder formar una silla. Esta silla tiene diversas partes en su anatomía, las cuales son:</p>
+<ul>
+<li>Asiento</li>
+<li>2 Largueros</li>
+<li>Patas Frontales A y B</li>
+<li>Patas Posteriores A y B</li>
+<li>2 Travesaños</li>
+<li>Respaldo</li>
+</ul>
+<p>Estas partes las dividiremos en 2 debido a que la curvatura del asiento tiene otro formato de trabajo que vamos a especificar más adelante.
+Para poder cortar la plancha de 122cm x 122cm x 15 mm necesitaremos una fresa con las siguientes especificaciones: Autodesk Generic 3-Axis (#1 – 6 mm diámetro Flat Endmill).</p>
+<p><img src="/img/Maderas/Fresa.jpg" alt="Planimetría_1"></p>
+<p>Esta fresa debe pasar múltiples veces en la plancha para poder hacer el corte, y es óptimo seleccionar un corte de 3 mm por pasada.También como hay diversas fresas, también hay distintos tipos de madera que se utilizan para cortar, tales como:</p>
+<ul>
+<li>Madera maciza (de cerezo, arce, aliso, nogal&hellip;)</li>
+</ul>
+<p><img src="/img/Maderas/madera-maciza.jpg" alt="Planimetría_1"></p>
+<ul>
+<li>DM/MDf</li>
+</ul>
+<p><img src="/img/Maderas/madera-dm-dmf.jpg" alt="Planimetría_1"></p>
+<ul>
+<li>Madera contrachapada</li>
+</ul>
+<p><img src="/img/Maderas/contrachapada.jpg" alt="Planimetría_1"></p>
+<ul>
+<li>Madera laminada</li>
+</ul>
+<p><img src="/img/Maderas/laminada.jpg" alt="Planimetría_1"></p>
+<p>En la siguiente tabla se puede observar una relación entre el tipo de material con la velocidad de uso de la máquina cnc incluyendo la fresa.</p>
+<p><img src="/img/Maderas/tablamaderas.png" alt="Planimetría_1"></p>
+<p>La madera es un material económico para poder hacer mueblería, por lo que es el material que más se recomienda y que los consumidores prefieren.</p>
+<h2 id="pasos-estructura">Pasos Estructura</h2>
+<p>En el siguiente encargo describire como mecanizar una máquina cnc a través de fusion 360, para el elaborar paso a paso una silla.</p>
+<h2 id="paso-1">Paso 1</h2>
+<p>Partimos ubicándonos en el espacio de trabajo de diseño, una vez aquí, crearemos un sketch el cual se ubicará en el plano xy, marcado en azul en la imagen de abajo.</p>
+<p><img src="/img/sillafresia/1.jpeg" alt="Planimetría_1"></p>
+<p>Una vez en el plano xy, trazaremos un 2-point rectangle, el cual tendrá una dimensión de 1220 x 1220 mm, este será nuestra plancha de terciado para elaborar cada una de las piezas de nuestra silla.</p>
+<p><img src="/img/sillafresia/2.jpeg" alt="Planimetría_1"></p>
+<p>Para terminar la creación de nuestra plancha, debemos aplicar un extrude a nuestro plano, de unos 15 mm, con esto tenemos listo nuestro espacio de trabajo para pasar al siguiente paso.</p>
+<p><img src="/img/sillafresia/3.jpeg" alt="Planimetría_1"></p>
+<h2 id="paso-2">Paso 2</h2>
+<p>Comenzamos a sacarle piezas a la silla, esto lo realizaremos con la herramienta move, marcando la casilla copy, en este caso para ejemplificar de forma simple, lo haremos con las patas posteriores de la silla, de un solo lado.</p>
+<p><img src="/img/sillafresia/4.jpeg" alt="Planimetría_1"></p>
+<p>Luego debemos utilizar la herramienta align, seleccionamos una de las caras de la pata, luego seleccionamos el plano xy tal como lo hicimos para crear el sketch, debemos preocuparnos que tanto estas piezas como todas las otras queden con las ranuras mirando hacia arriba, o sea a nuestro eje z positivo.</p>
+<p><img src="/img/sillafresia/5.jpeg" alt="Planimetría_1"></p>
+<p><img src="/img/sillafresia/6.jpeg" alt="Planimetría_1"></p>
+<p><img src="/img/sillafresia/7.jpeg" alt="Planimetría_1"></p>
+<p>Una vez alineadas las piezas al mismo nivel que nuestra plancha de terciado, las ubicamos en la plancha, con las ranuras hacia arriba, esto con el comando move, sin copy.</p>
+<p><img src="/img/sillafresia/8.jpeg" alt="Planimetría_1"></p>
+<h2 id="paso-3">Paso 3</h2>
+<p>Procedemos a pasar de nuestra área de trabajo de diseño a nuestra área de trabajo de manufactura.</p>
+<p><img src="/img/sillafresia/9.jpeg" alt="Planimetría_1"></p>
+<p>Una vez aquí, nos vamos a la carpeta marcada en azul en nuestra parte superior izq de la imagen de abajo, que corresponde al setup, en esta parte partimos seleccionando la máquina que utilizaremos, en este caso una &ldquo;Autodesk generic 3-axis&rdquo; y damos ok</p>
+<p><img src="/img/sillafresia/10.jpeg" alt="Planimetría_1"></p>
+<p>Luego en este mismo espacio de setup nos vamos a &ldquo;stock&rdquo; y cambiamos el &ldquo;mode&rdquo; a &ldquo;from solid&rdquo;, luego seleccionamos la plancha de terciado.</p>
+<p><img src="/img/sillafresia/11.jpeg" alt="Planimetría_1"></p>
+<p>Después en el mismo espacio donde seteamos la máquina de trabajo, nos vamos abajo a &ldquo;model&rdquo; y seleccionamos las piezas que queremos trabajar, en este caso las dos patas posteriores, en el caso concreto serían todas las piezas de la silla.</p>
+<p><img src="/img/sillafresia/12.jpeg" alt="Planimetría_1"></p>
+<p>En este mismo espacio nos vamos ahora a &ldquo;work coordinate system&rdquo; y cambiamos la orientación, apretamos &ldquo;select z axis/plane &amp; x axis&rdquo;, una vez hecho esto debemos seleccionar la parte superior de la plancha para que el eje z quede vertical al plano xy.
+Después apretamos el borde de la plancha que se encuentra detrás de la silla en la imagen para establecer la posición del eje x ahí, finalmente determinamos el punto (0,0,0) en modo guia para maquina en el vértice que se ve en la imagen 2 hacia abajo, ya podemos apretar ok.</p>
+<p><img src="/img/sillafresia/13.jpeg" alt="Planimetría_1"></p>
+<p><img src="/img/sillafresia/14.jpeg" alt="Planimetría_1"></p>
+<h2 id="paso-4">Paso 4</h2>
+<p>Podemos empezar con nuestra primera operación, un 2d contour, para generar las ranuras donde se unen las piezas, para crear estos pequeños agujeros, debemos seleccionar los vectores inferiores de cada ranura y damos ok.</p>
+<p><img src="/img/sillafresia/15.jpeg" alt="Planimetría_1"></p>
+<p><img src="/img/sillafresia/16.jpeg" alt="Planimetría_1"></p>
+<p>Una vez puesto ok el programa nos pedirá la fresia para realizar estos agujeros, en este caso usaremos una fresia de diámetro = 6 mm, con flute length = 20 mm, un overall length = 63 mm y de tipo = flat end mill, damos ok.</p>
+<p><img src="/img/sillafresia/17.jpeg" alt="Planimetría_1"></p>
+<p>Luego debemos hacer unos pequeños ajustes, desde la carpeta que aparecen en nuestra parte inf izq de la pantalla, seleccionamos el 2d contour que hicimos con click derecho, nos dirigimos a &ldquo;edit&rdquo; y de ahí iremos a passes, luego múltiple depths y apretaremos en la primera casilla &ldquo;maximum roughing&rdquo;, cambiandolo de 1 mm a 3 mm, dado que la fresia no puede atravesar una plancha de 15 mm teniendo un diámetro de 6 mm, debe realizarlo paso a paso, en este caso 5 pasadas por hoyo.</p>
+<p><img src="/img/sillafresia/18.jpeg" alt="Planimetría_1"></p>
+<p>La siguiente operación corresponde a un 2d pocket, en la cual seleccionaremos los sacados para generar las uniones mayores de las patas con los largueros, tal como se ve en la imagen.</p>
+<p><img src="/img/sillafresia/19.jpeg" alt="Planimetría_1"></p>
+<p>Por último realizaremos la operación 2d contour nuevamente, seleccionando los vectores inferiores de cada pieza en su totalidad marcados con color azul en la imagen de abajo, lo cual vendría siendo el contorno de la pieza completa por fuera.</p>
+<p><img src="/img/sillafresia/20.jpeg" alt="Planimetría_1"></p>
+<p>Nuevamente, vamos a edit en este nuevo 2d contour, para cambiar al igual que hicimos con las ranuras pequeñas, el múltiple depths, cambiando el primer espacio de 1 mm a 3 mm, exactamente como se hizo antes, la imagen de abajo muestra las veces que pasara la cnc por ahí.</p>
+<p><img src="/img/sillafresia/21.jpeg" alt="Planimetría_1"></p>
+<p>Por último debemos ir a edit nuevamente en este último 2d contour, de ahí iremos a &ldquo;geometry&rdquo; y luego marcaremos la casilla de &ldquo;tabs&rdquo;, ajustaremos el &ldquo;tab height&rdquo; a 3 mm y la &ldquo;tab distance&rdquo; a 350 mm. Los tabs corresponden a pequeñas uniones que dejamos algo así como un prepicado al contorno de la pieza, para prevenir que las piezas se rompan con el vibrar de la CNC, al pasar por todas las piezas, dado que si quedan sueltan puede ocurrir esto, ajustamos por ende la distancia de tabs debido a que no necesitamos tantos tabs, con unos pocos basta para sujetar las piezas y eliminar este potencial riesgo.
+La imagen permite ver como en el lado derecho, si miras con detención se logra ver un espacio vacío entre el recorrido de la CNC, ese es el tab.</p>
+<p><img src="/img/sillafresia/22.jpeg" alt="Planimetría_1"></p>
+<h2 id="paso-5">Paso 5</h2>
+<p>Todo este proceso anterior se debe realizar con cada una de las piezas de la silla, las cuales ubicamos en la plancha de terciado, luego de esto realizaremos los 2d contour y 2d pocket, con sus respectivos setups, exactamente los mismos que utilizamos en modo de representación con dos piezas para facilitar la explicación del ejercicio.</p>
+<p><img src="/img/sillafresia/todas.jpeg" alt="Planimetría_1"></p>
+<p>Una vez realizado todos los pasos anteriores con cada pieza, realizamos la simulación del proceso completo con casi todas las piezas.</p>
+<h2 id="pasos-asiento">Pasos asiento</h2>
+<ol>
+<li>
+<p>Después de descargar el archivo del asiento, hacemos un sketch rectangular de 610 x 610 mm con un extrude de 9 mm hacia el eje Z.</p>
+</li>
+<li>
+<p>Luego nos vamos a manufacture y nuevamente hacemos un set up de la plancha donde elegimos el plano de orientación XY con orientación Z, seleccionamos la cara de Z y X. También el box point que es la esquina superior izquierda.</p>
+</li>
+<li>
+<p>Realizamos un contour 2D de la misma manera que se hizo anteriormente</p>
+</li>
+<li>
+<p>Por último haremos un Trace con las siguientes caracteristicas; Stock to Leave/ Radial Srock Leave: 4.5 mm que sirve para que la fresa llegue a la mitad del ancho de la plancha para hacer todos los perfilados y así el material queda con mayor flexibilidad, que es lo que buscamos en este trabajo.</p>
+</li>
+</ol>
+<h2 id="planimetría-silla-fresia">Planimetría silla fresia</h2>
+<p><img src="/img/planimetria-2/1.png" alt="Planimetría_1">
+<img src="/img/planimetria-2/2.png" alt="Planimetría_1">
+<img src="/img/planimetria-2/3.png" alt="Planimetría_1">
+<img src="/img/planimetria-2/4.png" alt="Planimetría_1">
+<img src="/img/planimetria-2/5.png" alt="Planimetría_1">
+<img src="/img/planimetria-2/6.png" alt="Planimetría_1"></p>
+<div>
+    <iframe 
+    src='https://alumnos4151.autodesk360.com/shares/public/SH919a0QTf3c32634dcf5efca5056807190c?mode=embed'
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
+</div>
+<h2 id="videos-simulación-corte-cnc">Videos Simulación Corte CNC</h2>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/TutorialCNC.mp4"  type="video/mp4">
+    </video>
+</div>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/parte2asiento.mp4"  type="video/mp4">
+    </video>
+</div>
+<h2 id="galería-proseso-mecanizazo-cnc-en-vida-real">Galería proseso Mecanizazo CNC en vida real</h2>
+<p>
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
+<div class="gallery caption-position-bottom caption-effect-slide hover-effect-zoom hover-transition" itemscope itemtype="http://schema.org/ImageGallery">
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//10.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//10.jpg" alt="10th" />
+				    </div>
+			      <figcaption>
+		          <p>10th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//10.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//11.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//11.jpg" alt="11th" />
+				    </div>
+			      <figcaption>
+		          <p>11th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//11.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//12.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//12.jpg" alt="12th" />
+				    </div>
+			      <figcaption>
+		          <p>12th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//12.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//13.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//13.jpg" alt="13th" />
+				    </div>
+			      <figcaption>
+		          <p>13th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//13.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//14.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//14.jpg" alt="14th" />
+				    </div>
+			      <figcaption>
+		          <p>14th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//14.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//15.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//15.jpg" alt="15th" />
+				    </div>
+			      <figcaption>
+		          <p>15th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//15.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//16.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//16.jpg" alt="16th" />
+				    </div>
+			      <figcaption>
+		          <p>16th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//16.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//17.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//17.jpg" alt="17th" />
+				    </div>
+			      <figcaption>
+		          <p>17th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//17.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//18.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//18.jpg" alt="18th" />
+				    </div>
+			      <figcaption>
+		          <p>18th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//18.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//19.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//19.jpg" alt="19th" />
+				    </div>
+			      <figcaption>
+		          <p>19th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//19.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//20.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//20.jpg" alt="20th" />
+				    </div>
+			      <figcaption>
+		          <p>20th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//20.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//21.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//21.jpg" alt="21st" />
+				    </div>
+			      <figcaption>
+		          <p>21st</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//21.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//22.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//22.jpg" alt="22nd" />
+				    </div>
+			      <figcaption>
+		          <p>22nd</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//22.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//23.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//23.jpg" alt="23rd" />
+				    </div>
+			      <figcaption>
+		          <p>23rd</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//23.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//24.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//24.jpg" alt="24th" />
+				    </div>
+			      <figcaption>
+		          <p>24th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//24.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//25.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//25.jpg" alt="25th" />
+				    </div>
+			      <figcaption>
+		          <p>25th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//25.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//26.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//26.jpg" alt="26th" />
+				    </div>
+			      <figcaption>
+		          <p>26th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//26.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//27.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//27.jpg" alt="27th" />
+				    </div>
+			      <figcaption>
+		          <p>27th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//27.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//28.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//28.jpg" alt="28th" />
+				    </div>
+			      <figcaption>
+		          <p>28th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//28.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//29.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//29.jpg" alt="29th" />
+				    </div>
+			      <figcaption>
+		          <p>29th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//29.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//3.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//3.jpg" alt="3rd" />
+				    </div>
+			      <figcaption>
+		          <p>3rd</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//3.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//30.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//30.jpg" alt="30th" />
+				    </div>
+			      <figcaption>
+		          <p>30th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//30.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//31.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//31.jpg" alt="31st" />
+				    </div>
+			      <figcaption>
+		          <p>31st</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//31.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//32.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//32.jpg" alt="32nd" />
+				    </div>
+			      <figcaption>
+		          <p>32nd</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//32.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//33.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//33.jpg" alt="33rd" />
+				    </div>
+			      <figcaption>
+		          <p>33rd</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//33.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//34.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//34.jpg" alt="34th" />
+				    </div>
+			      <figcaption>
+		          <p>34th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//34.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//4.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//4.jpg" alt="4th" />
+				    </div>
+			      <figcaption>
+		          <p>4th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//4.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//5.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//5.jpg" alt="5th" />
+				    </div>
+			      <figcaption>
+		          <p>5th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//5.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//6.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//6.jpg" alt="6th" />
+				    </div>
+			      <figcaption>
+		          <p>6th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//6.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//7.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//7.jpg" alt="7th" />
+				    </div>
+			      <figcaption>
+		          <p>7th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//7.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//8.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//8.jpg" alt="8th" />
+				    </div>
+			      <figcaption>
+		          <p>8th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//8.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+				<div class="box">
+				  <figure itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+				    <div class="img" style="background-image: url('https://vicentearacena.github.io//img/sillasfresiagaleria//9.jpg');" >
+				      <img itemprop="thumbnail" src="https://vicentearacena.github.io//img/sillasfresiagaleria//9.jpg" alt="9th" />
+				    </div>
+			      <figcaption>
+		          <p>9th</p>
+			      </figcaption>
+				    <a href="https://vicentearacena.github.io//img/sillasfresiagaleria//9.jpg" itemprop="contentUrl"></a>
+				  </figure>
+				</div>
+</div>
+ 
+
+
+
   
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+</p>
+
 </div>
 </div>
 
