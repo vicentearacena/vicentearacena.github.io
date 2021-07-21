@@ -129,6 +129,11 @@
 <div class="content ">
   <h1 id="mecanizado-25-ejes">Mecanizado 2.5 ejes</h1>
 <h2 id="en-que-consiste">En que consiste</h2>
+<p>Las operaciones de mecanizado en 2,5 ejes son un conjunto de procedimientos que se pueden aplicar en centros de mecanizado 2,5 ejes y 3 ejes (comúnmente conocidas como fresadoras), para fabricar piezas de distintos materiales, moviendo la herramienta en las coordenadas X e Y a la vez durante el corte de material o arranque de viruta.</p>
+<p>En un mecanizado por corte de 2,5 ejes, la herramienta se puede llegar a mover en un máximo de 3 ejes de la máquina (XYZ), pero nunca se moverá en las tres coordenadas a la vez durante la trayectoria de corte.</p>
+<p>En las dos imágenes que se muestran a continuación (figura 1), las trayectorias de corte (representadas por líneas continuas de color azul claro) están contenidas siempre en planos paralelos al XY (plano de la base), de modo que se trata de un mecanizado en 2,5 ejes.</p>
+<p><img src="/img/cnc_2.5/ejemplo.jpeg" alt="CNC">
+Figura 1. Ejemplo de mecanizado de piezas con la estrategia de corte de 2,5 ejes.</p>
 <h2 id="pasos">Pasos</h2>
 <ol>
 <li>Seleccionamos el respaldo, botón derecho y creamos un nuevo componente. Exportamos el archivo Fusion 360 y abrimos el nuevo archivo. Abrimos este archivo y ajustamos el respaldo en 90° grados y alineamos al eje Y, ya que, es importante que el respaldo este en posición ortogonal.</li>
@@ -153,10 +158,11 @@ Importante: el “optimal load” debe ser de 3 mm para comenzar la simulación.
 <p><img src="/img/cnc_2.5/Imagen8.png" alt="CNC"></p>
 <p><img src="/img/cnc_2.5/Imagen9.png" alt="CNC"></p>
 <ol start="5">
-<li>Para arreglar el tema de colisión necesitamos tener una fresa mas larga, por lo tanto, vamos a “tool library”, damos botón derecho en la fresa actual, “copy tool” y “edit tool”. Ampliamos a 40 el “length below holder” y ya estamos listos para simular las tres trayectorias realizadas.</li>
+<li>Para arreglar el tema de colisión necesitamos tener una fresa mas larga, por lo tanto, vamos a “tool library”, damos botón derecho en la fresa actual, “copy tool” y “edit tool”. Ampliamos a 40 el “length below holder” y editamos las tres trayectorias con esa fresa. Con lo anterior estamos listos para simular las tres trayectorias realizadas.</li>
 </ol>
 <p><img src="/img/cnc_2.5/Imagen10.png" alt="CNC"></p>
 <h2 id="simulación">Simulación</h2>
+<h3 id="trayectoria-1">Trayectoria 1</h3>
 <div>
     <video 
     width="100%" 
@@ -165,6 +171,7 @@ Importante: el “optimal load” debe ser de 3 mm para comenzar la simulación.
     <source src="/img/1_Trim.mp4"  type="video/mp4">
     </video>
 </div>
+<h3 id="trayectoria-2">Trayectoria 2</h3>
 <div>
     <video 
     width="100%" 
@@ -173,6 +180,7 @@ Importante: el “optimal load” debe ser de 3 mm para comenzar la simulación.
     <source src="/img/2_Trim.mp4"  type="video/mp4">
     </video>
 </div>
+<h3 id="trayectoria-3">Trayectoria 3</h3>
 <div>
     <video 
     width="100%" 
@@ -180,6 +188,18 @@ Importante: el “optimal load” debe ser de 3 mm para comenzar la simulación.
     autoplay muted loop controls preload>
     <source src="/img/3_Trim.mp4"  type="video/mp4">
     </video>
+</div>
+<h2 id="fusion-360">Fusion 360</h2>
+<div>
+    <iframe 
+    src='https://gmail1816006.autodesk360.com/shares/public/SH56a43QTfd62c1cd968d90da823cb359387?mode=embed'
+    width="100%" 
+    height="450" 
+    allowfullscreen="true" 
+    webkitallowfullscreen="true" 
+    mozallowfullscreen="true"  
+    frameborder="0">
+    </iframe>    
 </div>
 
 </div>
