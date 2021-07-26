@@ -145,14 +145,14 @@ Figura 1. Ejemplo de mecanizado de piezas con la estrategia de corte de 2,5 ejes
 <p><img src="/img/cnc_2.5/Imagen2.png" alt="CNC"></p>
 <p><img src="/img/cnc_2.5/Imagen3.png" alt="CNC"></p>
 <ol start="3">
-<li>Vamos a diseño, en “create” seleccionamos Project y luego oprimimos el respaldo en la opción del navegador. Para finalizar damos Ok. Con eso tendremos el área del mecanizado. Volvemos a manufactura y hacemos una limpieza adaptativa con la misma fresa, para remover el material de la pieza con el fin de acelerar el proceso.  En las opciones de geometría (machining boundary) damos en “selección” y oprimimos el borde hecho con Project. En “model surfaces” damos en “body”.
+<li>Vamos a diseño, en “create” seleccionamos Project y luego oprimimos el respaldo en la opción del navegador. Para finalizar damos Ok. Con eso tendremos el área del mecanizado. Volvemos a manufactura y hacemos una limpieza adaptativa con la misma fresa para remover el material de la pieza con el fin de acelerar el proceso, con esto tendremos nuestra primera trayectoria dedicada al desbaste.  En las opciones de geometría (machining boundary) damos en “selección” y oprimimos el borde hecho con Project. En “model surfaces” damos en “body”.
 Importante: el “optimal load” debe ser de 3 mm para comenzar la simulación.</li>
 </ol>
 <p><img src="/img/cnc_2.5/Imagen4.png" alt="CNC"></p>
 <p><img src="/img/cnc_2.5/Imagen5.png" alt="CNC"></p>
 <p><img src="/img/cnc_2.5/Imagen6.png" alt="CNC"></p>
 <ol start="4">
-<li>Vamos a 3D, utilizamos la misma fresa, seleccionamos el vector (área) mas respaldo y no se incluye el “setup model”, con esto realizado tenemos nuestra primera trayectoria para remover el material. Duplicamos la capa de la primera trayectoria y la editamos para crear otra trayectoria, presionamos “Pass direction” y cambiamos a 90° grados y el “stepover” a 2 mm para así como mencionamos cambiar la trayectoria a una que vaya horizontal a lo largo del respaldo. Con todo lo anterior realizado podemos generar una nueva trayectoria continua en horizontal que pase de manera paralela por el respaldo.</li>
+<li>Vamos a 3D, utilizamos la misma fresa, seleccionamos el vector (área) hecho con project mas el respaldo y no se incluye el “setup model”, con esto tendremos una segunda trayectoria que recorre la seperficie para dar una trayectoria continua. Duplicamos la capa de la segunda trayectoria y la editamos para crear otra, presionamos “Pass direction” y cambiamos a 90° grados y el “stepover” a 2 mm para una mejor resolución. Con esto como mencionamos logramos cambiar la trayectoria a una que vaya horizontal a lo largo del respaldo. Con todo lo anterior realizado podemos generar una nueva trayectoria continua en horizontal que pase de manera paralela por el respaldo.</li>
 </ol>
 <p><img src="/img/cnc_2.5/Imagen7.png" alt="CNC"></p>
 <p><img src="/img/cnc_2.5/Imagen8.png" alt="CNC"></p>
