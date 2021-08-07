@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>4- Simulación &amp; Diseño Generativo - Vicente Aracena- Taller Fabricación 2021</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <link rel="icon" href="https://vicentearacena.github.io/favicon.png">
+
+  
+  
+  <link rel="stylesheet" href="/css/style.min.a32658f2eedb9bb852f8513925cb445e40633983f1ff54349b037dd04eafa2fa.css">
+  
+
+  
+
+</head>
+
+<body class='page page-default-single'>
+  <div id="main-menu-mobile" class="main-menu-mobile">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-dococumentación">
+      <a href="/docs/">
+        <span>Dococumentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+  <div class="wrapper">
+    <div class='header'>
+  <div class="container">
+    <div class="logo">
+      <a href="https://vicentearacena.github.io/"><img alt="Logo" src="/images/logo-uai.png" /></a>
+    </div>
+    <div class="logo-mobile">
+      <a href="https://vicentearacena.github.io/"><img alt="Logo" src="/images/logo-uai.png" /></a>
+    </div>
+    <div id="main-menu" class="main-menu">
+  <ul>
+    
+    
+    <li class="menu-item-inicio">
+      <a href="/">
+        <span>Inicio</span>
+      </a>
+    </li>
+    
+    <li class="menu-item-dococumentación">
+      <a href="/docs/">
+        <span>Dococumentación</span>
+      </a>
+    </li>
+    
+  </ul>
+</div>
+    <button id="toggle-main-menu-mobile" class="hamburger hamburger--slider" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+  </div>
+</div>
+
+
+    
+    
+    
+    
+    
+    
+
+    
+    <div class="container pt-2 pt-md-6 pb-3 pb-md-6">
+      <div class="row">
+        <div class="col-12 col-md-3 mb-3">
+          <div class="sidebar">
+            
+<div class="docs-menu">
+  <h4>Docs</h4>
+  <ul>
+    
+    <li class="">
+      <a href="https://vicentearacena.github.io/docs/0-unidad/">0- Fabricación Digital</a>
+    </li>
+    
+    <li class="">
+      <a href="https://vicentearacena.github.io/docs/ejemplo/">Ejemplo Shortcodes</a>
+    </li>
+    
+    <li class="">
+      <a href="https://vicentearacena.github.io/docs/1-planimetrias/">1- Planimetrías</a>
+    </li>
+    
+    <li class="">
+      <a href="https://vicentearacena.github.io/docs/2-unidad/">2- Mecanizado CNC</a>
+    </li>
+    
+    <li class="">
+      <a href="https://vicentearacena.github.io/docs/2-unidad-grupal/">2- Mecanizado CNC Grupo 7</a>
+    </li>
+    
+    <li class="">
+      <a href="https://vicentearacena.github.io/docs/3-cnc_2.5/">3- Mecanizado 2.5 ejes</a>
+    </li>
+    
+    <li class="active ">
+      <a href="https://vicentearacena.github.io/docs/4-simulacion-dise%C3%B1o-generativo/">4- Simulación &amp; Diseño Generativo</a>
+    </li>
+    
+    <li class="">
+      <a href="https://vicentearacena.github.io/docs/markdown/">Ejemplos Markdown</a>
+    </li>
+    
+  </ul>
+</div>
+
+          </div>
+        </div>
+        <div class="col-12 col-md-9">
+          
+<h1 class="title">4- Simulación &amp; Diseño Generativo</h1>
+<div class="content ">
+  <h2 id="diseño-generativo">Diseño Generativo</h2>
+<h2 id="problema-a-plantear">Problema a plantear</h2>
+<p>Tanto en el ejercicio GE Bracket como en el Ala de avión el problema a plantear es el mismo, que en este caso vendría siendo minimizar la masa del elemento. Los dos objetos están construidos con mucho material que a veces resulta ser innecesario y en algunas industrias como en la aeronáutica el minimizar material es fundamental debido a su relación con el peso y como consecuencia, el consumo de bencina. Para esto aplicaremos el diseño generativo con el fin de obtener diferentes diseños con varios materiales para escoger el mas adecuado.</p>
+<h2 id="pasos-para-desarrollar-el-diseño">Pasos para desarrollar el diseño</h2>
+<p>Abrimos la pieza y nos vamos a la pestaña de diseño generativo para poder hacer un nuevo estudio, con esto podemos definir cuáles son las piezas que debemos preservar. Es importante este paso, ya que, debemos darle la información correcta al PC para poder optimizar de mejor manera la pieza. Recordemos que nuestro objetivo es minimizar el material de la pieza para que sea lo mas liviana posible y entregue los mejores resultados.</p>
+<p><img src="/img/generativo/paso_1.jpg" alt="DiseñoGenerativo"></p>
+<p><img src="/img/generativo/paso_2.jpg" alt="DiseñoGenerativo"></p>
+<p>La segunda condición a identificar son las piezas obstáculo en donde no debe ir el material para poder apernar la pieza. Seleccionamos las partes en donde existe una restricción estructural, que es en donde los pernos se anclan a una estructura fija y por último determinar las partes donde se ejerce la fuerza. El objetivo declarado para esta pieza en minimizar la masa definida con un coeficiente de seguridad de 2.</p>
+<p><img src="/img/generativo/paso_3.jpg" alt="DiseñoGenerativo"></p>
+<p><img src="/img/generativo/paso_4.jpg" alt="DiseñoGenerativo"></p>
+<p><img src="/img/generativo/paso_5.jpg" alt="DiseñoGenerativo"></p>
+<p>Cambiar a manufactura aditiva con un espesor mínimo e incorporar los materiales necesarios para hacer el comparativo de eficiencia en la simulación. Antes de generar los resultados es necesario comprobar si todo esta correcto con el Pre-check, si todo sale bien entonces se avanza con el paso siguiente.</p>
+<p><img src="/img/generativo/paso_6.jpg" alt="DiseñoGenerativo"></p>
+<p>El generar el nuevo estudio se puede demorar entre 1 a 2 horas, pero cuando ya lo hemos generado podemos visualizar los siguientes resultados que determinaran el cómo será nuestra nueva pieza.</p>
+<h2 id="ala-de-avión">Ala de Avión</h2>
+<h2 id="pasos-para-desarrollar-el-diseño-1">Pasos para desarrollar el diseño</h2>
+<p>El principal problema a plantear es que podemos hacer para que el ala de avión sea más liviana, suponiendo que hay una relación directamente proporcional con el consumo de combustible del avión.</p>
+<p>En primer lugar, aislamos la pieza que queremos optimizar y le hacemos un nuevo estudio para ver los componentes de la pieza. En esta parte es donde planteamos el problema de diseño con los valores necesarios para la simulación.</p>
+<p>A continuación, tomaremos el borde de la pieza para poder realizar la misma simulación anterior pero esta vez, sin el material interior. Para la pieza debemos escoger el tipo de fresado y los diferentes materiales para hacer un comparativo de eficiencia en donde se optimiza el material.</p>
+<p>Con la pieza lista para que el diseño sea más elegante y útil de aplicar se recomienda rediseñarla con la herramientas del Fusion.</p>
+
+</div>
+</div>
+
+        </div>
+      </div>
+    </div>
+    
+  </div>
+
+  
+
+  
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/scripts.min.eaf147370baecdd07c022597db631f99cab1c9cd6479de586f30327a568d6a0f.js"></script>
+  
+
+  
+  
+  
+    
+  
+
+
+</body>
+
+</html>
