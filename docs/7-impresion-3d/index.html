@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Taller de Fabricación 2021 - Vicente Aracena- Taller Fabricación 2021</title>
+  <title>7- Impresión 3D - Vicente Aracena- Taller Fabricación 2021</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
   <link rel="icon" href="https://vicentearacena.github.io/favicon.png">
@@ -18,7 +18,7 @@
 
 </head>
 
-<body class='page page-default-list'>
+<body class='page page-default-single'>
   <div id="main-menu-mobile" class="main-menu-mobile">
   <ul>
     
@@ -29,7 +29,7 @@
       </a>
     </li>
     
-    <li class="menu-item-dococumentación active">
+    <li class="menu-item-dococumentación">
       <a href="/docs/">
         <span>Dococumentación</span>
       </a>
@@ -56,7 +56,7 @@
       </a>
     </li>
     
-    <li class="menu-item-dococumentación active">
+    <li class="menu-item-dococumentación">
       <a href="/docs/">
         <span>Dococumentación</span>
       </a>
@@ -126,7 +126,7 @@
       <a href="https://vicentearacena.github.io/docs/6-molde/">6- Molde</a>
     </li>
     
-    <li class="">
+    <li class="active ">
       <a href="https://vicentearacena.github.io/docs/7-impresion-3d/">7- Impresión 3D</a>
     </li>
     
@@ -149,108 +149,48 @@
         </div>
         <div class="col-12 col-md-9">
           
-
-<span class="overview">Resumen</span>
-<h1 class="title">Taller de Fabricación 2021</h1>
-<div class="content">
-  <h2 id="documentación-del-taller-de-fabricación">Documentación del Taller de Fabricación</h2>
-<p>Este template será utilizado para generar la documentación de los trabajos realizados en el Taller de Fabricación 2021.</p>
-
+<h1 class="title">7- Impresión 3D</h1>
+<div class="content ">
+  <h2 id="configuración-cura">Configuración cura</h2>
+<p>Añadir impresora Ender 3, cambiar material y cabezal de 0,4 mm. Luego de guardar un archivo fusión con el comando “make” en el ordenador, se puede abrir en el Cura. Cambiar la altura entre capa a 0.3 mm en los presets y presionar la tecla slice.</p>
+<p><img src="/img/impresion_3d/cura_1.jpg" alt="impresion"></p>
+<p><img src="/img/impresion_3d/cura_2.jpg" alt="impresion"></p>
+<p>El sofware genera con esto una serie de capas que conformaran al modelo. Podemos modificar algunas características del objeto como la densidad y las capas solidas para que el proceso tarde una menor cantidad de horas y pese mucho menos.</p>
+<p><img src="/img/impresion_3d/cura_3.jpg" alt="impresion"></p>
+<h2 id="optimización-de-noozle-en-impresora-fdm">Optimización de Noozle en impresora FDM</h2>
+<p>Para desarrollar este ejercicio debo elegir una Nuzzle de 0.4 y por defecto le corresponde 0.2 de Quality. 215 grados de temperatura y aumentar la velocidad a 60. Le damos a slice y vemos cuantas horas tarda el proceso, si demora mucho no hay problema en cambiar a 0.32 la opción Quality.</p>
+<p><img src="/img/impresion_3d/fdm_1.jpg" alt="impresion"></p>
+<p><img src="/img/impresion_3d/fdm_2.jpg" alt="impresion"></p>
+<p>A continuación, lo que haremos será optimizar el tiempo con el Nozzle de 0.8, con las mismas propiedades de antes y ahora el tiempo estimado ya no es de 11 horas sino de 7 horas. Ahora si cambiamos la altura de capas a 0.6 el tiempo estimado es de 4 horas 29 minutos. De esta manera se pueden ir configurando las diferentes herramientas para lograr una pieza de alta calidad en un tiempo comparativamente bajo, recordar que la calidad y el tiempo son directamente proporcionales en estos procesos.</p>
+<p><img src="/img/impresion_3d/fdm_3.jpg" alt="impresion"></p>
+<p><img src="/img/impresion_3d/fdm_4.jpg" alt="impresion"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/fdm.mp4"  type="video/mp4">
+    </video>
+</div>
+<h2 id="impresora-3d-sla">Impresora 3D: SLA</h2>
+<p>Maquina utilizada: Form 3.</p>
+<p>Al abrir el archivo se debe escoger el tipo de máquina, color de resina y la altura de impresión.  En segundo lugar, tenemos que generar los soportes de la pieza, los generamos automáticamente y si no estamos conformes los podemos editar.</p>
+<p><img src="/img/impresion_3d/sla_1.jpg" alt="impresion"></p>
+<p><img src="/img/impresion_3d/sla_2.jpg" alt="impresion"></p>
+<p><img src="/img/impresion_3d/sla_3.jpg" alt="impresion"></p>
+<p><img src="/img/impresion_3d/sla_4.jpg" alt="impresion"></p>
+<p><img src="/img/impresion_3d/sla_5.jpg" alt="impresion"></p>
+<div>
+    <video 
+    width="100%" 
+    height="450" 
+    autoplay muted loop controls preload>
+    <source src="/img/sla.mp4"  type="video/mp4">
+    </video>
 </div>
 
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/0-unidad/">0- Fabricación Digital</a></h2>
-  <p>Unidad 0</p>
 </div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/ejemplo/">Ejemplo Shortcodes</a></h2>
-  <p>Uso de los Shortcodes para agregar contenido en el sitio de documentación.</p>
 </div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/1-planimetrias/">1- Planimetrías</a></h2>
-  <p>Unidad 1</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/2-unidad/">2- Mecanizado CNC</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/2-unidad-grupal/">2- Mecanizado CNC Grupo 7</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/3-cnc_2.5/">3- Mecanizado 2.5 ejes</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/4-simulacion-dise%C3%B1o-generativo/">4- Simulación &amp; Diseño Generativo</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/5-materialidad/">5- Materialidad molde</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/6-molde/">6- Molde</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/7-impresion-3d/">7- Impresión 3D</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/9-modelado-3d-de-superficies/">8- Modelado 3D De Superficies</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/8-molde-huella/">9- Molde Huella</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-<div class="summary mb-2">
-  
-  <h2 class="title-summary"><a href="https://vicentearacena.github.io/docs/markdown/">Ejemplos Markdown</a></h2>
-  <p>Ejemplos de uso de lenguaje Markdown para redactar las publicaciones.</p>
-</div>
-
-
-
 
         </div>
       </div>
